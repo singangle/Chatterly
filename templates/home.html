@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatterly - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-warm d-flex align-items-center min-vh-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm warm-card">
+                    <div class="card-body text-center">
+                        <div class="language-toggle mb-4">
+                            <button class="btn btn-sm btn-outline-secondary" onclick="toggleLanguage()">中文</button>
+                        </div>
+                        <h1 class="h3 mb-4" data-en="Welcome to Chatterly" data-zh="欢迎来到Chatterly">Welcome to Chatterly</h1>
+                        <form action="{{ url_for('join') }}" method="post">
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg warm-input" name="username" 
+                                    placeholder="Username" data-en-placeholder="Username" data-zh-placeholder="用户名" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg warm-input" name="email" 
+                                    placeholder="Email" data-en-placeholder="Email" data-zh-placeholder="邮箱" required>
+                                <div class="text-danger" id="email-error" data-en="Please enter a valid email address" data-zh="请输入正确的邮箱格式"></div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control form-control-lg warm-input" name="password" 
+                                    placeholder="Password" data-zh-placeholder="密码" required>
+                                <div class="text-danger" id="password-error" data-en="Password must be at least 6 characters and contain both letters and numbers" data-zh="密码必须超过6位，并包含数字和字母"></div>
+                            </div>
+                            <div class="mb-3 form-check text-start">
+                                <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                                <label class="form-check-label" for="remember" data-en="Remember me" data-zh="记住我">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 warm-button" 
+                                data-en="Join Chatterly" data-zh="加入Chatterly">Join Chatterly</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

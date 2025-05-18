@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+.container {
+    max-width: 1200px; /* Increased from 800px to 1200px */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input[type="text"] {
+    flex: 2; /* Increased from 1 to 2 for more width in flex layout */
+    padding: 16px;
+    font-size: 1.2em;
+    height: 48px;
+    font-weight: bold;
+}
+
+/* Warm theme colors */
+.bg-warm {
+    background-color: #f5e6d3;
+}
+
+.warm-card {
+    background-color: #fff9f0;
+    border-color: #e2d5c3;
+}
+
+.warm-header {
+    background-color: #8b7355;
+    color: white;
+}
+
+.warm-message {
+    background-color: #ffffff;
+    border-left: 4px solid #d4c5b1;
+}
+
+.text-danger {
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.warm-input {
+    background-color: #fff9f0;
+    border-color: #d4c5b1;
+    font-weight: bold;
+}
+
+.warm-input:focus {
+    background-color: #ffffff;
+    border-color: #8b7355;
+    box-shadow: 0 0 0 0.25rem rgba(139, 115, 85, 0.25);
+}
+
+.warm-button {
+    background-color: #8b7355;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.warm-button:hover {
+    background-color: #6d5a43;
+    color: white;
+}
+
+.chat-messages {
+    height: 60vh;
+    overflow-y: auto;
+    background-color: #fff9f0;
+}
+
+.message {
+    transition: all 0.2s ease;
+}
+
+.message:hover {
+    transform: translateX(5px);
+}
+
+.message-content {
+    word-break: break-word;
+}
+
+/* Custom scrollbar */
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #f1e5d6;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #8b7355;
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #6d5a43;
+}
+
+.message-form {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Indie Flower', cursive, sans-serif;
+    font-weight: bold;
+}
+
+.mb-4{
+    font-weight: bold;
+}
